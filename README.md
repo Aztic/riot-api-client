@@ -20,7 +20,7 @@ for i in champions['champions']:
     ids.append(i['id'])
 
 for i in ids:
-  print(client.get('api/lol/static-data/na/champion/',i)['name']
+  print(client.get('api/lol/static-data/na/champion/',i)['name'])
   
 ```
 
