@@ -87,5 +87,4 @@ def _current_game_participants(region,summoner,a_client):
 		return_info = a_client.get('observer-mode/rest/consumer/getSpectatorGameInfo',region_id,sum_id)['participants']
 		return return_info
 	except:
-		print("FAILED HERE!")
 		return -1
