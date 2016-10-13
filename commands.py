@@ -71,7 +71,7 @@ def _summoner_by_name(summoner, region, a_client):
 
 def _summoner_by_id(id, a_client):
 	try:
-		return_info = client.get('api/lol',region,'/v1.4/summoner',id)[summoner]
+		return_info = client.get('api/lol',region,'/v1.4/summoner',id)
 		return return_info
 	except:
 		return -1
