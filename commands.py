@@ -28,7 +28,6 @@ def mastery_level(champ,region,summoner,a_client):
 	summoner = summoner.lower()
 	region_id = PLATFORM_ID[region]
 	try:
-		#client.get('api/lol',region,'v1.4/summoner/by-name',summoner)[summoner]
 		player_id = _summoner_by_name(summoner,region,a_client)['id']
 		champion_id = client.get('api/lol/static-data',region,'/v1.2/champion/')['data'][champ]['id']
 		returned_value = a_client.get('championmastery/location',region_id,'/player',player_id,'/champion',champion_id)
