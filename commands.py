@@ -48,7 +48,6 @@ def get_division(region,summoner,a_client):
 	except:
 		return -1
 
-#### SEPARATE FOR TEAM ID  #####
 def game_information(region,summoner,a_client):
 	ret_dict = {'100':{}, '200':{}}
 	game_participants = _current_game_participants(region,summoner,a_client)
