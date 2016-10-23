@@ -1,5 +1,5 @@
 ## riot-api-client
-A python client for [Riot API](https://developer.riotgames.com/).
+An unofficial python client for [Riot API](https://developer.riotgames.com/).
 
 ## Usage
 
