@@ -22,6 +22,7 @@ def free_week(a_client):
 	except:
 		return -1
 
+#Checks the mastery level with determined champion of any summoner
 def mastery_level(champ,region,summoner,a_client):
 	region = region.lower()
 	champ = champ.lower().title()
@@ -35,6 +36,7 @@ def mastery_level(champ,region,summoner,a_client):
 	except:
 		return -1
 
+#Returns the tier and division of any summoner
 def get_division(region,summoner,a_client):
 	region = region.lower()
 	summoner = summoner.replace(" ", "").lower()
@@ -47,7 +49,8 @@ def get_division(region,summoner,a_client):
 		return tier + ' ' + division
 	except:
 		return -1
-
+	
+#Returns the current league and name of all summoners in specific game
 def game_information(region,summoner,a_client):
 	ret_dict = {'100':{}, '200':{}}
 	game_participants = _current_game_participants(region,summoner,a_client)
@@ -71,7 +74,7 @@ def _summoner_by_name(summoner, region, a_client):
 
 def _summoner_by_id(id, a_client):
 	try:
-		return_info = client.get('api/lol',region,'/v1.4/summoner',id)
+		return_info = client.get('api/lol',region,'/v1.4/summoner',id)[id]
 		return return_info
 	except:
 		return -1
